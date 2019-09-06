@@ -1,6 +1,7 @@
 {
     "name": "royalcms/html",
     "description": "The Royalcms html package.",
+    "type": "library",
     "license": "MIT",
     "homepage": "http://royalcms.cn",
     "support": {
