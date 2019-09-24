@@ -30,7 +30,7 @@ class HtmlServiceProvider extends ServiceProvider {
 	 */
 	protected function registerHtmlBuilder()
 	{
-		$this->royalcms->bindShared('html', function($royalcms)
+		$this->royalcms->singleton('html', function($royalcms)
 		{
 			return new HtmlBuilder($royalcms['url']);
 		});
@@ -43,7 +43,7 @@ class HtmlServiceProvider extends ServiceProvider {
 	 */
 	protected function registerFormBuilder()
 	{
-		$this->royalcms->bindShared('form', function($royalcms)
+		$this->royalcms->singleton('form', function($royalcms)
 		{
 			$form = new FormBuilder($royalcms['html'], $royalcms['url'], $royalcms['session.store']->getToken());
 
